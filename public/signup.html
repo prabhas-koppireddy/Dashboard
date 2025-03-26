@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup</title>
-    
+    <title>Signup - Aatagadu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="/signupSubmit" method="post" id="signupForm">
-        <label for="Name">Name:</label>
-        <input type="text" name="Name" id="name"><br>
-    
-        <label for="dob">DOB:</label>
-        <input type="date" name="dob" id="dob"><br>
-    
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username"><br>
-    
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password"><br>
-    
-        <input type="submit" value="Sign Up">
-    </form>
-    
+    <div class="form-container">
+        <h2>Signup for Aatagadu</h2>
+        <form action="/signupSubmit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="Name" id="name" required>
+
+            <label for="dob">DOB:</label>
+            <input type="date" name="dob" id="dob" required>
+
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
 </body>
 </html>

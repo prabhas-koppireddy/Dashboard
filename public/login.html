@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login - Aatagadu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="/dashboard" method="post">
-        <label for="username">username:</label>
-        <input type="text" name="username"><br>
-        <label for="password">password:</label>
-        <input type="password" name="password" id="">
-        <input type="submit" value="login">
-    </form>
+    <div class="form-container">
+        <h2>Login to Aatagadu</h2>
+        <form action="/dashboard" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">Signup here</a></p>
+    </div>
 </body>
 </html>
