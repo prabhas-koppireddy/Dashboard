@@ -41,9 +41,7 @@ app.get('/signup', function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'signup.html'));
 });
 
-app.get('/editInfo', function (req, res) {
-    res.sendFile(path.join(__dirname, 'public', 'edit.html'));
-});
+
 
 
 app.post("/signupSubmit", function(req, res) {
@@ -57,7 +55,8 @@ app.post("/signupSubmit", function(req, res) {
         username: req.body.username,
         password: req.body.password
     }).then(() => {
-        res.send("Signup successful");
+        
+        res.redirect('/login')
     }).catch(err => {
         res.send("Error: " + err.message);
     });
