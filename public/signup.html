@@ -22,9 +22,17 @@
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required>
 
+            <label for="role">Select Role:</label>
+            <select name="role" id="role" required>
+                <option value="Batter">Batter</option>
+                <option value="Bowler">Bowler</option>
+                <option value="All-rounder">All-rounder</option>
+                <option value="Wicket-keeper">Wicket-keeper</option>
+            </select>
+
             <button type="submit" class="btn">Sign Up</button>
         </form>
-        <p>Already have an account? <a href="/public/login.html">Login here</a></p>
+        <p>Already have an account? <a href="/login">Login here</a></p>
     </div>
 </body>
 </html>

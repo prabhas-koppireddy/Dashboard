@@ -11,13 +11,15 @@
         <h1>Welcome, <%= username %>!</h1>
         <p>Your gaming journey starts here.</p>
 
+        <div class="dashboard-grid">
             <div class="card">
                 <h2>Profile Info</h2>
                 <p><strong>Name:</strong> <%= about.Name %></p>
                 <p><strong>Date of Birth:</strong> <%= about.dob %></p>
-                
-            </div>
+                <p><strong>Role:</strong> <%= about.role %></p>
 
+            </div>
+        </div>
 
         <a href="/logout" class="btn logout">Logout</a>
     </div>

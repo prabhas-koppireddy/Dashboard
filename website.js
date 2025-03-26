@@ -44,23 +44,27 @@ app.get('/signup', function (req, res) {
 
 
 
-app.post("/signupSubmit", function(req, res) {
-    if (!req.body.username || !req.body.password) {
-        return res.send("Error: Missing username or password.");
+app.post("/signupSubmit", async function (req, res) {
+    if (!req.body.username || !req.body.password || !req.body.role) {
+        return res.send("Error: Missing username, password, or role.");
     }
 
-    db.collection("users").add({
-        Name: req.body.Name || "Unknown",
-        dob: req.body.dob || "N/A",
-        username: req.body.username,
-        password: req.body.password
-    }).then(() => {
-        
-        res.redirect('/login')
-    }).catch(err => {
+    try {
+        // Save user data in Firestore
+        await db.collection("users").add({
+            Name: req.body.Name || "Unknown",
+            dob: req.body.dob || "N/A",
+            username: req.body.username,
+            password: req.body.password,
+            role: req.body.role  // Save Player Role
+        });
+
+        res.redirect("/login"); // Redirect to login after successful signup
+    } catch (err) {
         res.send("Error: " + err.message);
-    });
+    }
 });
+
 app.post("/dashboard", function(req, res) {
     if (!req.body.username || !req.body.password) {
         return res.send("Error: Missing username or password.");
@@ -80,7 +84,8 @@ app.post("/dashboard", function(req, res) {
                     username: req.body.username,
                     about: {
                         Name: data.Name || "Unknown",
-                        dob: data.dob || "N/A"
+                        dob: data.dob || "N/A",
+                        role: data.role
                     }
                 });
             });
