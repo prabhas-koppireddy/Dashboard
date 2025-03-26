@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Aatagadu</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>hi <%= about.Name %> you born on <%= about.dob%></h1>
-    <a href="/logout">logout</a>
+    <div class="dashboard-container">
+        <h1>Welcome, <%= username %>!</h1>
+        <p>Your gaming journey starts here.</p>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2>Profile Info</h2>
+                <p><strong>Name:</strong> <%= about.Name %></p>
+                <p><strong>Date of Birth:</strong> <%= about.dob %></p>
+                <a href="/editInfo" class="btn">Edit Profile</a>
+            </div>
+
+            <div class="card">
+                <h2>Upcoming Matches</h2>
+                <p>No scheduled matches yet.</p>
+                <a href="#" class="btn">View Schedule</a>
+            </div>
+
+            <div class="card">
+                <h2>Leaderboard</h2>
+                <p>Check out the top players.</p>
+                <a href="#" class="btn">View Leaderboard</a>
+            </div>
+        </div>
+
+        <a href="/logout" class="btn logout">Logout</a>
+    </div>
 </body>
 </html>

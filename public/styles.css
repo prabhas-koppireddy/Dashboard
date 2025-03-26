@@ -109,3 +109,51 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Dashboard Container */
+.dashboard-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Dashboard Cards */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.card h2 {
+    color: #00ffcc;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* Logout Button */
+.logout {
+    background: red;
+    margin-top: 20px;
+}
+
+.logout:hover {
+    background: darkred;
+}
