@@ -11,7 +11,6 @@
 - Backend: Node.js, Express.js  
 - Frontend: HTML, CSS, EJS  
 - Database: Firebase Firestore  
-- Storage: Firebase Storage (for profile pictures)  
 - Session Management: Express-session  
  
 
