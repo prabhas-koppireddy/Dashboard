@@ -1,4 +1,3 @@
-/* General Styling */
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ body {
     height: 100vh;
 }
 
-/* Main Container */
 .container {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
@@ -34,7 +32,6 @@ p {
     font-size: 1.2rem;
 }
 
-/* Buttons */
 .buttons {
     margin-top: 20px;
 }
@@ -59,7 +56,6 @@ p {
     transform: scale(1.05);
 }
 
-/* Form Container */
 .form-container {
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
@@ -75,7 +71,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Form Inputs */
 form {
     display: flex;
     flex-direction: column;
@@ -100,7 +95,6 @@ input:focus {
     box-shadow: 0 0 5px #00ff99;
 }
 
-/* Links */
 a {
     color: #00ffcc;
     text-decoration: none;
@@ -109,7 +103,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-/* Dashboard Container */
 .dashboard-container {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
@@ -122,7 +115,6 @@ a:hover {
     margin: auto;
 }
 
-/* Dashboard Grid */
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -130,7 +122,6 @@ a:hover {
     margin-top: 20px;
 }
 
-/* Dashboard Cards */
 .card {
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
@@ -148,7 +139,6 @@ a:hover {
     font-size: 1rem;
 }
 
-/* Logout Button */
 .logout {
     background: red;
     margin-top: 20px;
