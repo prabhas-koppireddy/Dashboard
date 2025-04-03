@@ -116,7 +116,7 @@ app.post("/dashboard", function(req, res) {
 
 app.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('http://localhost:3000/login');
+        res.redirect('/login');
     });
 });
 
