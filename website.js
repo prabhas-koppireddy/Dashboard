@@ -39,8 +39,8 @@ app.get('/signup', function (req, res) {
 });
 
 app.post("/signupSubmit", async function (req, res) {
-    if (!req.body.username || !req.body.password || !req.body.role) {
-        return res.send("Error: Missing username, password, or role.");
+    if (!req.body.username || !req.body.password ) {
+        return res.send("Error: Missing username, password.");
     }
 
     try {
@@ -61,8 +61,7 @@ app.post("/signupSubmit", async function (req, res) {
             Name: req.body.Name || "Unknown",
             dob: req.body.dob || "N/A",
             username: req.body.username,
-            password: hashedPassword,  
-            role: req.body.role 
+            password: hashedPassword
         });
 
         res.redirect("/login");
@@ -99,8 +98,7 @@ app.post("/dashboard", function(req, res) {
                     username: req.body.username,
                     about: {
                         Name: data.Name || "Unknown",
-                        dob: data.dob || "N/A",
-                        role: data.role
+                        dob: data.dob || "N/A"
                     }
                 });
             }
